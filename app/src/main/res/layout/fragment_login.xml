@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <EditText
+            android:background="@drawable/edit_txt_bg"
+            android:id="@+id/emailET"
+            android:layout_width="288dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="87dp"
+            android:ems="10"
+            android:hint="  Email"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/passET"
+            android:layout_width="282dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:background="@drawable/edit_txt_bg"
+            android:hint="  Pass"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/emailET"
+            app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:text="Login"
+            app:layout_constraintBaseline_toBaselineOf="@+id/signinBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/signinBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="48dp"
+            android:text="Signin"
+            app:layout_constraintStart_toEndOf="@+id/loginBtn"
+            app:layout_constraintTop_toBottomOf="@+id/passET" />
+
+        <TextView
+            android:id="@+id/errmsgTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="81dp"
+
+            android:textSize="22dp"
+            app:layout_constraintEnd_toEndOf="@+id/signinBtn"
+            app:layout_constraintStart_toStartOf="@+id/loginBtn"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

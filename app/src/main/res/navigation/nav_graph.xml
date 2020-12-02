@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.tourmatefirebase.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newTourFragment"
+            app:destination="@id/newTourFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tourDetailsFragment"
+            app:destination="@id/tourDetailsFragment" />
+
+
+        <action
+            android:id="@+id/action_homeFragment_to_tourDetailsFragment2"
+            app:destination="@id/tourDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mapsFragment2"
+            app:destination="@id/mapsFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tourmatefirebase.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTourFragment"
+        android:name="com.example.tourmatefirebase.NewTourFragment"
+        android:label="fragment_new_tour"
+        tools:layout="@layout/fragment_new_tour" >
+        <action
+            android:id="@+id/action_newTourFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tourDetailsFragment"
+        android:name="com.example.tourmatefirebase.TourDetailsFragment"
+        android:label="fragment_tour_details"
+        tools:layout="@layout/fragment_tour_details" >
+        <action
+            android:id="@+id/action_tourDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mapsFragment2"
+        android:name="com.example.tourmatefirebase.MapsFragment2"
+        android:label="fragment_maps2"
+        tools:layout="@layout/fragment_maps2" />
+    <fragment
+        android:id="@+id/mapsFragment3"
+        android:name="com.example.tourmatefirebase.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+
+</navigation>
